@@ -40,7 +40,9 @@ public class IniciaConexion extends Thread {
 	private LinkedList<String> participantes;
 	private String databaseHost;
 	private String[] opcionesVoto;
-	/* A ver cosas feas del mal, ando haciendo pruebas jajaja no se crean no son del mal*/
+	
+	/* el wey que andaba comentando aquí hace rato está loco, no le hagan caso. Son cositas lindas del bien =) */
+	
 	public IniciaConexion(String databaseHost, String[] opcionesVoto) {
 		this.databaseHost = databaseHost;
 		this.opcionesVoto = opcionesVoto;
