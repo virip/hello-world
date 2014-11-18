@@ -20,6 +20,7 @@
 /*
  El paquete de datos ayuda a quien atiende, a saber quÃ© quiere el cliente.
  */
+ //Mua!!!
 package servidor;
 
 import java.io.IOException;
@@ -40,9 +41,7 @@ public class IniciaConexion extends Thread {
 	private LinkedList<String> participantes;
 	private String databaseHost;
 	private String[] opcionesVoto;
-	
-	/* el wey que andaba comentando aquí hace rato está loco, no le hagan caso. Son cositas lindas del bien =) */
-	
+	/* A ver cosas feas del mal, ando haciendo pruebas jajaja no se crean no son del mal*/
 	public IniciaConexion(String databaseHost, String[] opcionesVoto) {
 		this.databaseHost = databaseHost;
 		this.opcionesVoto = opcionesVoto;
