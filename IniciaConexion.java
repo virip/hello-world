@@ -1,24 +1,24 @@
 // Un servidor debe tener gente que atienda personalmente a cada cliente.
 // Cuando un cliente necesita hacer algo, lo solicita al servidor.
-// ¿Qué servicios se tienen disponibles?
+// Â¿QuÃ© servicios se tienen disponibles?
 /*
  Verificar que una boleta entrante pueda ser atendida.
  Actualizar un registro.
- Proporsionar información de progreso.
+ Proporsionar informaciÃ³n de progreso.
  */
 
 /*
- El ¿qué desea hacer?
- Puede ser que quiera comprobar la conexión, comprobar un usuario o
- llevar a cabo alguna acción.
+ El Â¿quÃ© desea hacer?
+ Puede ser que quiera comprobar la conexiÃ³n, comprobar un usuario o
+ llevar a cabo alguna acciÃ³n.
  */
 
 /*
- El servidor sabe quién tiene la base de datos.
+ El servidor sabe quiÃ©n tiene la base de datos.
  */
 
 /*
- El paquete de datos ayuda a quien atiende, a saber qué quiere el cliente.
+ El paquete de datos ayuda a quien atiende, a saber quÃ© quiere el cliente.
  */
 package servidor;
 
@@ -40,7 +40,7 @@ public class IniciaConexion extends Thread {
 	private LinkedList<String> participantes;
 	private String databaseHost;
 	private String[] opcionesVoto;
-
+	/* A ver cosas feas del mal, ando haciendo pruebas jajaja no se crean no son del mal*/
 	public IniciaConexion(String databaseHost, String[] opcionesVoto) {
 		this.databaseHost = databaseHost;
 		this.opcionesVoto = opcionesVoto;
@@ -107,7 +107,7 @@ public class IniciaConexion extends Thread {
 							} else {
 								if (datos[0].equals("Consultor")) {
 									System.out
-											.println("S� se intenta mandar esto");
+											.println("Sí se intenta mandar esto");
 									salidaObjeto.writeUTF("YES");
 									salidaObjeto.flush();
 								} else {
@@ -147,7 +147,7 @@ public class IniciaConexion extends Thread {
 							}
 						}
 						salidaObjeto
-								.writeUTF("A�n no hay una terminal emparejada.");
+								.writeUTF("Aún no hay una terminal emparejada.");
 						salidaObjeto.close();
 						entradaObjeto.close();
 						socket.close();
@@ -181,7 +181,7 @@ public class IniciaConexion extends Thread {
 					} catch (SQLException e) {
 						if (e.toString().contains("resultados.")) {
 							System.out
-									.println("El metodo contains() s� hace eso");
+									.println("El metodo contains() sí hace eso");
 						} else {
 							if (e.toString().contains("violation")) {
 								salidaObjeto.writeUTF("La Boleta ya existe.");
@@ -199,8 +199,8 @@ public class IniciaConexion extends Thread {
 					return;
 				}
 				/*
-				 * Si el participante manda s�lo tres datos, quiere decir que
-				 * est� seleccionando Capturista.
+				 * Si el participante manda sólo tres datos, quiere decir que
+				 * está seleccionando Capturista.
 				 */
 				if (datos[0].equals("Participante")) {
 					salidaObjeto = new ObjectOutputStream(
